@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".step_4">
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font"
+        android:text="Step 4/5"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.057" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/font"
+        android:text="How ofter do you exercise?"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        tools:layout_editor_absoluteX="128dp" />
+
+    <ImageButton
+        android:id="@+id/newbie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/newbie"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="220dp" />
+
+    <ImageButton
+        android:id="@+id/keep_on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/keep_on"
+        app:layout_constraintTop_toBottomOf="@+id/newbie"
+        tools:layout_editor_absoluteX="51dp" />
+
+    <ImageButton
+        android:id="@+id/advanced"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/advanced"
+        app:layout_constraintTop_toBottomOf="@+id/keep_on"
+        tools:layout_editor_absoluteX="51dp" />
+
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/buttons"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="#6790CB"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.401"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/advanced" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
