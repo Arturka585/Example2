@@ -5,11 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 
 public class step_4 extends AppCompatActivity {
-  int pressed = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +25,6 @@ public class step_4 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 newbie.setImageResource(R.drawable.pressed_newbie);
-                pressed=1;
                 keep_on.setImageResource(R.drawable.keep_on);
                 advanced.setImageResource(R.drawable.advanced);
             }
@@ -34,45 +34,90 @@ public class step_4 extends AppCompatActivity {
             @Override
             public boolean onLongClick(View v) {
                 newbie.setImageResource(R.drawable.newbie);
-                pressed=2;
-                fermale.setImageResource(R.drawable.pressed_fermale);
-                return false;
+                keep_on.setImageResource(R.drawable.pressed_keep_on);
+                advanced.setImageResource(R.drawable.advanced);
+                return  false;
             }
         });
 
-        fermale.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                fermale.setImageResource(R.drawable.pressed_fermale);
-                pressed=2;
-                male.setImageResource(R.drawable.male);
-            }
-        });
-
-        fermale.setOnLongClickListener(new View.OnLongClickListener() {
+        newbie.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                fermale.setImageResource(R.drawable.fermale);
-                pressed=1;
-                male.setImageResource(R.drawable.pressed_male);
-                return false;
+                newbie.setImageResource(R.drawable.newbie);
+                keep_on.setImageResource(R.drawable.keep_on);
+                advanced.setImageResource(R.drawable.pressed_advanced);
+                return  false;
             }
         });
 
+        keep_on.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                newbie.setImageResource(R.drawable.newbie);
+                keep_on.setImageResource(R.drawable.pressed_keep_on);
+                advanced.setImageResource(R.drawable.advanced);
+            }
+        });
+
+        keep_on.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                newbie.setImageResource(R.drawable.pressed_newbie);
+                keep_on.setImageResource(R.drawable.keep_on);
+                advanced.setImageResource(R.drawable.advanced);
+                return  false;
+            }
+        });
+
+        keep_on.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                newbie.setImageResource(R.drawable.newbie);
+                keep_on.setImageResource(R.drawable.keep_on);
+                advanced.setImageResource(R.drawable.pressed_advanced);
+                return  false;
+            }
+        });
+
+        advanced.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                newbie.setImageResource(R.drawable.newbie);
+                keep_on.setImageResource(R.drawable.keep_on);
+                advanced.setImageResource(R.drawable.pressed_advanced);
+            }
+        });
+
+        advanced.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                newbie.setImageResource(R.drawable.pressed_newbie);
+                keep_on.setImageResource(R.drawable.keep_on);
+                advanced.setImageResource(R.drawable.advanced);
+                return  false;
+            }
+        });
+
+        advanced.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                newbie.setImageResource(R.drawable.newbie);
+                keep_on.setImageResource(R.drawable.pressed_keep_on);
+                advanced.setImageResource(R.drawable.advanced);
+                return  false;
+            }
+        });
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (pressed==1){
-                    Intent I = new Intent(step_2.this,step_3.class);
-                    startActivity(I);
-                }
-                else{
-                    if (pressed==2){
-                        Intent I=new Intent(step_2.this,Step_3_w.class);
-                        startActivity(I);
-                    }
-                }
+                Intent I = new Intent(step_4.this, step_5.class);
+                startActivity(I);
+
             }
         });
+
+
+        Window w=getWindow();
+        w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 }

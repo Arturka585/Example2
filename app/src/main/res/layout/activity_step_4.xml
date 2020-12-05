@@ -27,6 +27,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/font"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         android:text="How ofter do you exercise?"
         android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@+id/textView9"
@@ -36,27 +38,32 @@
         android:id="@+id/newbie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
         android:background="@drawable/newbie"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="220dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <ImageButton
         android:id="@+id/keep_on"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/keep_on"
-        app:layout_constraintTop_toBottomOf="@+id/newbie"
-        tools:layout_editor_absoluteX="51dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newbie" />
 
     <ImageButton
         android:id="@+id/advanced"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/advanced"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/keep_on"
-        tools:layout_editor_absoluteX="51dp" />
+        tools:layout_editor_absoluteX="63dp" />
 
     <Button
         android:id="@+id/next_button"
@@ -68,8 +75,9 @@
         android:textAllCaps="false"
         android:textColor="#6790CB"
         android:textSize="18sp"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.401"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/advanced" />
 
