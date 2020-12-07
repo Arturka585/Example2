@@ -8,30 +8,30 @@
     tools:context=".login">
 
     <Button
-        android:id="@+id/sing_up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/sing_in"
+        android:layout_width="283dp"
+        android:layout_height="57dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/sing_in"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="117dp"
+        android:layout_height="72dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        app:srcCompat="@drawable/homegym"
-        tools:layout_editor_absoluteX="138dp"
-        />
+        app:srcCompat="@drawable/homegym" />
 
     <EditText
-        android:id="@+id/Weight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:id="@+id/username"
+        android:layout_width="283dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/user_name"
         android:ems="10"
         android:hint="Ivanov"
@@ -43,16 +43,15 @@
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="131dp"
+        android:layout_height="128dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/fitness_logo" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/sing_up"
         android:layout_width="85dp"
         android:layout_height="25dp"
         android:layout_marginTop="28dp"
@@ -60,10 +59,10 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sing_up" />
+        app:layout_constraintTop_toBottomOf="@+id/sing_in" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/skip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -74,20 +73,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/sing_up" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/password"
+        android:layout_width="283dp"
+        android:layout_height="57dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/password"
         android:ems="10"
         android:hint="*****"
-        android:paddingLeft="65dp"
         android:inputType="textPassword"
-        app:layout_constraintTop_toBottomOf="@+id/Weight"
-        tools:layout_editor_absoluteX="45dp" />
+        android:paddingLeft="65dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 SharedPreferences pref = getPreferences(MODE_PRIVATE);
                 if(pref.getBoolean("isFirstRun",true)){
-                    Intent I = new Intent(MainActivity.this,step_1.class);
+                    Intent I = new Intent(MainActivity.this,login.class);
                     startActivity(I);
                 }
                 else{
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 pref.edit().putBoolean("isFirstRun",true).apply();
             }
-        }, 3*100);
+        }, 0*100);
 
 
 
