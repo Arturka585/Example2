@@ -1,5 +1,6 @@
 package com.example.example;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -21,6 +22,7 @@ public class step_5 extends AppCompatActivity {
 
     int a = 0;
     String text;
+    String text2;
 
     FileOutputStream fos = null;
 
@@ -36,6 +38,10 @@ public class step_5 extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                Intent I = new Intent(step_5.this,login.class);
+                startActivity(I);
+
                 text = weight.getText().toString();
                 try {
                     FileOutputStream fileOutput = openFileOutput("weigh_height.txt", MODE_PRIVATE);
@@ -46,7 +52,17 @@ public class step_5 extends AppCompatActivity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+            text2 = height.getText().toString();
+                try {
+                FileOutputStream fileOutput = openFileOutput("weigh_height.txt", MODE_PRIVATE);
+                fileOutput.write(text2.getBytes());
+                fileOutput.close();
+            } catch (FileNotFoundException fileNotFoundException) {
+                fileNotFoundException.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
+        }
         });
         Window w = getWindow();
         w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
